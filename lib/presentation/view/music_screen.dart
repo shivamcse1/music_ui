@@ -1,4 +1,5 @@
 import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
+import 'package:music/presentation/view/album_screen.dart';
 
 class MusicScreen extends StatefulWidget {
   const MusicScreen({super.key});
@@ -47,7 +48,12 @@ class MusicScreenState extends State<MusicScreen> {
                 ),
                 const Spacer(),
                 InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: ((context) => const AlbumScreen())));
+                    },
                     child: const Icon(
                       Icons.keyboard_arrow_down,
                       size: 32,
